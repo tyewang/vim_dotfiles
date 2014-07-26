@@ -7,7 +7,7 @@ if &shell == "/usr/bin/sudosh"
 endif
 
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#incubate()
 filetype plugin indent on
 
 
@@ -182,6 +182,7 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 " ========= Insert Shortcuts ========
 
 imap <C-L> <SPACE>=><SPACE>
+imap <C-D> import ipdb; ipdb.set_trace()
 
 " ========= Functions ========
 
