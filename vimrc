@@ -132,6 +132,8 @@ let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
 let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
 let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 
+let g:jedi#use_splits_not_buffers = "right"
+
 " ========= Shortcuts ========
 
 " NERDTree
