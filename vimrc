@@ -7,7 +7,7 @@ if &shell == "/usr/bin/sudosh"
 endif
 
 filetype off
-call pathogen#incubate()
+call pathogen#infect()
 filetype plugin indent on
 
 
