@@ -225,10 +225,3 @@ function! __Edge()
   let g:VimuxOrientation = "h"
   let g:VimuxHeight = "40"
 endfunction
-
-function! __HardMode()
-  nmap h <nop>
-  nmap j <nop>
-  nmap k <nop>
-  nmap l <nop>
-endfunction
