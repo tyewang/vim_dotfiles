@@ -176,6 +176,10 @@ nnoremap <silent> Y y$
 
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
+" Vimux Nose Test
+map <silent> <LocalLeader>rf :wa<CR> :RunFocusedNoseTests<CR>
+map <silent> <LocalLeader>rb :wa<CR> :RunCurrentNoseTests<CR>
+
 " ========= Insert Shortcuts ========
 
 imap <C-L> <SPACE>=><SPACE>
