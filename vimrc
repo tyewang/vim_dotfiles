@@ -213,12 +213,6 @@ endfunction
 command! -nargs=0 Trim :call Trim()
 nnoremap <silent> <Leader>cw :Trim<CR>
 
-function! StartInferiorSlimeServer()
-  let g:__InferiorSlimeRunning = 1
-  call VimuxRunCommand("inferior-slime")
-endfunction
-command! -nargs=0 StartInferiorSlimeServer :call StartInferiorSlimeServer()
-
 function! __Edge()
   colorscheme Tomorrow-Night
   au BufWinLeave * colorscheme Tomorrow-Night
