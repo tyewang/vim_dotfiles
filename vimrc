@@ -1,4 +1,5 @@
 " ========= Setup ========
+set rtp+=/usr/local/lib/python2.6/dist-packages/powerline/bindings/vim
 
 set nocompatible
 
@@ -9,7 +10,7 @@ endif
 filetype off
 call pathogen#infect()
 filetype plugin indent on
-
+set omnifunc=syntaxcomplete#Complete
 
 " ========= Options ========
 
@@ -29,8 +30,7 @@ set dir=/tmp//
 set scrolloff=5
 set ignorecase
 set smartcase
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/**,bower_components/**
-set tags+=gems.tags
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*
 
 if version >= 703
   set undodir=~/.vim/undodir
@@ -46,17 +46,10 @@ au FileType diff colorscheme desert
 au FileType git colorscheme desert
 au BufWinLeave * colorscheme vibrantink
 
-augroup markdown
-  au!
-  au BufNewFile,BufRead *.md,*.markdown setlocal filetype=ghmarkdown
-augroup END
-
 " File Types
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType java setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType cs setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 autocmd FileType tex setlocal textwidth=78
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
@@ -73,7 +66,7 @@ autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd BufRead,InsertLeave * match ExtraWhitespace /\s\+$/
 
 " Autoremove trailing spaces when saving the buffer
-autocmd FileType c,cpp,eruby,html,java,javascript,php,ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType ruby,c,cpp,java,php,html autocmd BufWritePre <buffer> :%s/\s\+$//e
 
 " Highlight too-long lines
 autocmd BufRead,InsertEnter,InsertLeave * 2match LineLengthError /\%126v.*/
@@ -133,7 +126,7 @@ let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
 let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 
 let g:jedi#use_tabs_not_buffers = 0
-let g:jedi#use_splits_not_buffers = "right"
+let g:jedi#popup_on_dot = 0
 let g:syntastic_python_checkers = ['python', 'pyflakes']
 
 " ========= Shortcuts ========
@@ -190,7 +183,7 @@ imap <C-D> import ipdb; ipdb.set_trace()
 
 " ========= Functions ========
 
-command! SudoW w !sudo tee %
+command SudoW w !sudo tee %
 
 " http://techspeak.plainlystated.com/2009/08/vim-tohtml-customization.html
 function! DivHtml(line1, line2)
@@ -204,7 +197,7 @@ function! DivHtml(line1, line2)
 
   set nonu
 endfunction
-command! -range=% DivHtml :call DivHtml(<line1>,<line2>)
+command -range=% DivHtml :call DivHtml(<line1>,<line2>)
 
 function! GitGrepWord()
   cgetexpr system("git grep -n '" . expand("<cword>") . "'")
