@@ -121,6 +121,7 @@ let g:VimuxUseNearestPane = 1
 
 let g:CommandTMaxHeight = 15
 let g:CommandTMatchWindowAtTop = 1
+let g:CommandTMatchWindowReverse = 0
 let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
 let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
 let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
@@ -178,7 +179,7 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Vimux Nose Test
 map <silent> <LocalLeader>rf :wa<CR> :RunFocusedNoseTests<CR>
-map <silent> <LocalLeader>rb :wa<CR> :RunCurrentNoseTests<CR>
+map <silent> <LocalLeader>rb :wa<CR> :RunAllNoseTests<CR>
 
 " ========= Insert Shortcuts ========
 
