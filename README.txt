@@ -1,13 +1,5 @@
-After cloning this project, you can run the following to link these dotfiles
-into your home directory:
+These are the dotfiles I use.
 
-    rake activate
+To use these dotfiles, I suggest creating aliases to these files.
 
-Be warned: this will overwrite any existing .vimrc, .gvimrc or .vim/ files you
-have in your home directory.
-
-If you plan on using command-t, you'll need to build the C extension. Make sure
-to use the ruby you built vim against:
-
-    rvm use system
-    rake compile_command_t
+For example, I alias `~/.vimrc` to the `vimrc` file.
