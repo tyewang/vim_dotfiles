@@ -15,6 +15,12 @@ ln -s "$(pwd)/vimrc" ~/.vimrc
 ln -s "$(pwd)/vim" ~/.vim
 ````
 
+Install Python requirements:
+```
+sudo pip install pyflakes
+sudo pip install jedi
+```
+
 ## Configuration
 
 After this, most plugins (e.g. NerdTree) will automatically work. A couple
