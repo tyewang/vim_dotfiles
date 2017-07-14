@@ -30,7 +30,7 @@ set dir=/tmp//
 set scrolloff=5
 set ignorecase
 set smartcase
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/*
 
 if version >= 703
   set undodir=~/.vim/undodir
