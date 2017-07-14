@@ -10,7 +10,7 @@ endif
 filetype off
 call pathogen#infect()
 filetype plugin indent on
-set omnifunc=syntaxcomplete#Complete
+set omnifunc=jedi#completions
 
 " ========= Options ========
 
