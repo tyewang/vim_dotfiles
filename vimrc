@@ -46,6 +46,11 @@ au FileType diff colorscheme desert
 au FileType git colorscheme desert
 au BufWinLeave * colorscheme vibrantink
 
+" Cursor
+highlight Cursor guifg=white guibg=black
+set guicursor=n-v-c:block-Cursor
+set guicursor+=i:ver100-iCursor
+
 " File Types
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
