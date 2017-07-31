@@ -133,6 +133,7 @@ let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
+let g:jedi#smart_auto_mappings = 0
 let g:syntastic_python_checkers = ['python', 'pyflakes']
 
 " ========= Shortcuts ========
