@@ -11,6 +11,7 @@ filetype off
 call pathogen#infect()
 filetype plugin indent on
 set omnifunc=jedi#completions
+runtime macros/matchit.vim
 
 " ========= Options ========
 
