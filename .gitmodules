@@ -28,3 +28,9 @@
 [submodule "vim/bundle/vimux-nose-test"]
 	path = vim/bundle/vimux-nose-test
 	url = https://github.com/pitluga/vimux-nose-test.git
+[submodule "vim/bundle/vim-jsx"]
+	path = vim/bundle/vim-jsx
+	url = https://github.com/mxw/vim-jsx.git
+[submodule "vim/bundle/vim-javascript"]
+	path = vim/bundle/vim-javascript
+	url = https://github.com/pangloss/vim-javascript.git
