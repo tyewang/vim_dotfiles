@@ -112,7 +112,6 @@ let g:gist_detect_filetype = 1
 
 let g:rubycomplete_buffer_loading = 1
 
-
 let g:no_html_toolbar = 'yes'
 
 let coffee_no_trailing_space_error = 1
@@ -135,6 +134,8 @@ let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#smart_auto_mappings = 0
 let g:syntastic_python_checkers = ['python', 'pyflakes']
+
+let g:jsx_ext_required = 0
 
 " ========= Shortcuts ========
 
