@@ -11,6 +11,7 @@ filetype off
 call pathogen#infect()
 filetype plugin indent on
 set omnifunc=jedi#completions
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 runtime macros/matchit.vim
 
 " ========= Options ========
@@ -193,6 +194,9 @@ map <silent> <LocalLeader>rb :wa<CR> :RunAllNoseTests<CR>
 
 imap <C-L> <SPACE>=><SPACE>
 imap <C-D> import ipdb; ipdb.set_trace()
+" Remapping of autocomplete trigger
+imap <C-SPACE> <C-N>
+imap <C-@> <C-Space>
 
 " ========= Functions ========
 
