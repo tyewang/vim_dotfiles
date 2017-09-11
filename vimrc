@@ -55,7 +55,6 @@ set guicursor+=i:ver100-iCursor
 
 " File Types
 
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
 
 autocmd FileType tex setlocal textwidth=78
