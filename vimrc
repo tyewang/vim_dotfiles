@@ -189,6 +189,10 @@ map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 map <silent> <LocalLeader>rf :wa<CR> :RunFocusedNoseTests<CR>
 map <silent> <LocalLeader>rb :wa<CR> :RunAllNoseTests<CR>
 
+" Vimux Jest Test
+map <silent> <LocalLeader>rf :wa<CR> :RunJestFocused<CR>
+map <silent> <LocalLeader>rb :wa<CR> :RunJestOnBuffer<CR>
+
 " ========= Insert Shortcuts ========
 
 imap <C-L> <SPACE>=><SPACE>
