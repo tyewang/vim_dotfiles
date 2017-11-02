@@ -186,12 +186,12 @@ nnoremap <silent> Y y$
 map <silent> <LocalLeader>ws :highlight clear ExtraWhitespace<CR>
 
 " Vimux Nose Test
-map <silent> <LocalLeader>rf :wa<CR> :RunFocusedNoseTests<CR>
-map <silent> <LocalLeader>rb :wa<CR> :RunAllNoseTests<CR>
+autocmd FileType python map <silent> <LocalLeader>rf :wa<CR> :RunFocusedNoseTests<CR>
+autocmd FileType python map <silent> <LocalLeader>rb :wa<CR> :RunAllNoseTests<CR>
 
 " Vimux Jest Test
-map <silent> <LocalLeader>rf :wa<CR> :RunJestFocused<CR>
-map <silent> <LocalLeader>rb :wa<CR> :RunJestOnBuffer<CR>
+autocmd FileType javascript map <silent> <LocalLeader>rf :wa<CR> :RunJestFocused<CR>
+autocmd FileType javascript map <silent> <LocalLeader>rb :wa<CR> :RunJestOnBuffer<CR>
 
 " ========= Insert Shortcuts ========
 
