@@ -32,7 +32,7 @@ set dir=/tmp//
 set scrolloff=5
 set ignorecase
 set smartcase
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,vendor/*,node_modules/*
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,*/vendor/*,*/node_modules/*
 
 if version >= 703
   set undodir=~/.vim/undodir
@@ -134,6 +134,8 @@ let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
 let g:jedi#smart_auto_mappings = 0
+
+let g:syntastic_check_on_open = 1
 let g:syntastic_python_checkers = ['python', 'pyflakes']
 
 let g:jsx_ext_required = 0
