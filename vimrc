@@ -140,6 +140,15 @@ let g:syntastic_python_checkers = ['python', 'pyflakes']
 
 let g:jsx_ext_required = 0
 
+let g:prettier#autoformat = 0
+autocmd BufWritePre *.js,*.jsx,*.mjs,*.ts,*.tsx,*.css,*.less,*.scss,*.json,*.graphql,*.md,*.vue Prettier
+let g:prettier#config#tab_width = 2
+let g:prettier#config#use_tabs = 'false'
+let g:prettier#config#semi = 'true'
+let g:prettier#config#jsx_bracket_same_line = 'true'
+let g:prettier#config#arrow_parens = 'always'
+let g:prettier#config#trailing_comma = 'all'
+
 " ========= Shortcuts ========
 
 " NERDTree
