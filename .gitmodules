@@ -40,3 +40,6 @@
 [submodule "vim/bundle/vimux-jest-test"]
 	path = vim/bundle/vimux-jest-test
 	url = git@github.com:tyewang/vimux-jest-test.git
+[submodule "vim/bundle/vim-prettier"]
+	path = vim/bundle/vim-prettier
+	url = https://github.com/prettier/vim-prettier
