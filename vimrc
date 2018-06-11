@@ -11,7 +11,6 @@ filetype off
 call pathogen#infect()
 filetype plugin indent on
 set omnifunc=jedi#completions
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 runtime macros/matchit.vim
 
 " ========= Options ========
@@ -32,7 +31,7 @@ set dir=/tmp//
 set scrolloff=5
 set ignorecase
 set smartcase
-set wildignore+=*.pyc,*.o,*.class,*.lo,.git,*/vendor/*,*/node_modules/*
+set wildignore+=*.pyc,*.o,*.class,*.lo,.git,*/vendor/*,*/node_modules/*,*/build/*
 
 if version >= 703
   set undodir=~/.vim/undodir
@@ -56,11 +55,10 @@ set guicursor+=i:ver100-iCursor
 " File Types
 
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
-
 autocmd FileType tex setlocal textwidth=78
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
-
 autocmd FileType ruby runtime ruby_mappings.vim
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 
 if version >= 700
     autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
