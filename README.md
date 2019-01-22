@@ -29,7 +29,7 @@ plugins still need to be configured.
 ### Command-T
 Command-T is the fuzzy search tool I use. To set it up:
 ```
-cd ~/.vim/bundle/command-t/ruby/command-t
+cd ~/.vim/bundle/command-t/ruby/command-t/ext/command-t
 ruby extconf.rb
 make
 ```
