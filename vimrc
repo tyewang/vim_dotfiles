@@ -207,7 +207,7 @@ map <silent> <leader>pt :Prettier<CR>
 " ========= Insert Shortcuts ========
 
 imap <C-L> <SPACE>=><SPACE>
-imap <C-D> import ipdb; ipdb.set_trace()
+imap <C-D> import ipdb; ipdb.sset_trace()
 " Remapping of autocomplete trigger
 imap <C-SPACE> <C-N>
 imap <C-@> <C-Space>
