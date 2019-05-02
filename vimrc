@@ -201,6 +201,9 @@ autocmd FileType python map <silent> <LocalLeader>rb :wa<CR> :RunAllNoseTests<CR
 autocmd FileType javascript map <silent> <LocalLeader>rf :wa<CR> :RunJestFocused<CR>
 autocmd FileType javascript map <silent> <LocalLeader>rb :wa<CR> :RunJestOnBuffer<CR>
 
+" Prettier
+map <silent> <leader>pt :Prettier<CR>
+
 " ========= Insert Shortcuts ========
 
 imap <C-L> <SPACE>=><SPACE>
