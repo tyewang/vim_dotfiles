@@ -127,6 +127,7 @@ let g:jedi#smart_auto_mappings = 0
 
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_checkers = ['python', 'pyflakes']
+let g:syntastic_javascript_checkers = ['eslint']
 
 let g:jsx_ext_required = 0
 
