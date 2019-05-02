@@ -10,7 +10,6 @@ endif
 filetype off
 call pathogen#infect()
 filetype plugin indent on
-set omnifunc=jedi#completions
 runtime macros/matchit.vim
 
 " ========= Options ========
@@ -54,7 +53,7 @@ set guicursor+=i:ver100-iCursor
 
 " File Types
 
-autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 omnifunc=jedi#completions
 autocmd FileType tex setlocal textwidth=78
 autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 autocmd FileType ruby runtime ruby_mappings.vim
