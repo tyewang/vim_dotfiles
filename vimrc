@@ -1,5 +1,6 @@
 " ========= Setup ========
 set rtp+=/usr/local/lib/python2.6/dist-packages/powerline/bindings/vim
+set rtp+=/usr/local/opt/fzf
 
 set nocompatible
 
@@ -114,12 +115,17 @@ let NERDTreeIgnore=['\.pyc', '\.o', '\.class', '\.lo']
 
 let g:VimuxUseNearestPane = 1
 
-let g:CommandTMaxHeight = 15
-let g:CommandTMatchWindowAtTop = 1
-let g:CommandTMatchWindowReverse = 0
-let g:CommandTCancelMap     = ['<ESC>', '<C-c>']
-let g:CommandTSelectNextMap = ['<C-n>', '<C-j>', '<ESC>OB']
-let g:CommandTSelectPrevMap = ['<C-p>', '<C-k>', '<ESC>OA']
+let $FZF_DEFAULT_COMMAND = 'find . -name "*" -type f 2>/dev/null
+                            \ | grep -v -E "tmp\/|.gitmodules|.git\/|deps\/|_build\/|node_modules\/|vendor\/"
+                            \ | sed "s|^\./||"'
+let $FZF_DEFAULT_OPTS = '--reverse'
+let g:fzf_tags_command = 'ctags -R --exclude=".git\|.svn\|log\|tmp\|db\|pkg" --extra=+f --langmap=Lisp:+.clj'
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-s': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
 
 let g:jedi#use_tabs_not_buffers = 0
 let g:jedi#popup_on_dot = 0
@@ -138,10 +144,21 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
-" CommandT
-map <silent> <leader>ff :CommandT<CR>
-map <silent> <leader>fb :CommandTBuffer<CR>
-map <silent> <leader>fr :CommandTFlush<CR>
+" FZF
+function! SmartFuzzy()
+  let root = split(system('git rev-parse --show-toplevel'), '\n')
+  if len(root) == 0 || v:shell_error
+    Files
+  else
+    GFiles -co --exclude-standard -- . ':!:vendor/*'
+  endif
+endfunction
+
+command! -nargs=* SmartFuzzy :call SmartFuzzy()
+map <silent> <leader>ff :SmartFuzzy<CR>
+map <silent> <leader>fg :GFiles<CR>
+map <silent> <leader>fb :Buffers<CR>
+map <silent> <leader>ft :Tags<CR>
 
 " Ack
 map <LocalLeader>aw :Ack '<C-R><C-W>'
