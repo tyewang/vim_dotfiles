@@ -223,16 +223,3 @@ function! Trim()
 endfunction
 command! -nargs=0 Trim :call Trim()
 nnoremap <silent> <Leader>cw :Trim<CR>
-
-function! __Edge()
-  colorscheme Tomorrow-Night
-  au BufWinLeave * colorscheme Tomorrow-Night
-
-  set ttyfast
-
-  map <leader>nf :e%:h<CR>
-  map <C-p> :CommandT<CR>
-
-  let g:VimuxOrientation = "h"
-  let g:VimuxHeight = "40"
-endfunction
