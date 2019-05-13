@@ -204,7 +204,8 @@ autocmd FileType javascript map <silent> <LocalLeader>rf :wa<CR> :RunJestFocused
 autocmd FileType javascript map <silent> <LocalLeader>rb :wa<CR> :RunJestOnBuffer<CR>
 
 " Prettier
-map <silent> <leader>pt :Prettier<CR>
+autocmd FileType javascript map <silent> <leader>pt :Prettier<CR>
+autocmd FileType python map <silent> <leader>pt :Black<CR>
 
 " ========= Insert Shortcuts ========
 
