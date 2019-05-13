@@ -125,6 +125,8 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
+let g:fzf_layout = { 'up': '~20%' }
+
 
 
 let g:jedi#use_tabs_not_buffers = 0
