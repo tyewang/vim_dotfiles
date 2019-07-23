@@ -200,8 +200,8 @@ autocmd FileType python map <silent> <LocalLeader>rf :wa<CR> :RunFocusedNoseTest
 autocmd FileType python map <silent> <LocalLeader>rb :wa<CR> :RunAllNoseTests<CR>
 
 " Vimux Jest Test
-autocmd FileType javascript map <silent> <LocalLeader>rf :wa<CR> :RunJestFocused<CR>
-autocmd FileType javascript map <silent> <LocalLeader>rb :wa<CR> :RunJestOnBuffer<CR>
+autocmd FileType javascript,typescript map <silent> <LocalLeader>rf :wa<CR> :RunJestFocused<CR>
+autocmd FileType javascript,typescript  map <silent> <LocalLeader>rb :wa<CR> :RunJestOnBuffer<CR>
 
 " Prettier
 autocmd FileType javascript map <silent> <leader>pt :Prettier<CR>
