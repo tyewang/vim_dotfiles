@@ -49,3 +49,6 @@
 [submodule "vim/bundle/black"]
 	path = vim/bundle/black
 	url = git@github.com:python/black.git
+[submodule "vim/bundle/typescript-vim"]
+	path = vim/bundle/typescript-vim
+	url = https://github.com/leafgarland/typescript-vim.git
