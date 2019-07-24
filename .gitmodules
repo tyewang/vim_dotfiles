@@ -55,3 +55,6 @@
 [submodule "vim/bundle/tsuquyomi"]
 	path = vim/bundle/tsuquyomi
 	url = git@github.com:Quramy/tsuquyomi.git
+[submodule "vim/bundle/vim-polyglot"]
+	path = vim/bundle/vim-polyglot
+	url = git@github.com:sheerun/vim-polyglot.git
