@@ -233,13 +233,7 @@ function! DivHtml(line1, line2)
 endfunction
 command -range=% DivHtml :call DivHtml(<line1>,<line2>)
 
-function! GitGrepWord()
-  cgetexpr system("git grep -n '" . expand("<cword>") . "'")
-  cwin
-  echo 'Number of matches: ' . len(getqflist())
-endfunction
-command! -nargs=0 GitGrepWord :call GitGrepWord()
-nnoremap <silent> <Leader>gw :GitGrepWord<CR>
+nnoremap <silent> <Leader>gw :Ggrep! "\<<cword>\>"<CR>
 
 function! Trim()
   %s/\s*$//
