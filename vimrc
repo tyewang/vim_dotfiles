@@ -233,7 +233,7 @@ function! DivHtml(line1, line2)
 endfunction
 command -range=% DivHtml :call DivHtml(<line1>,<line2>)
 
-nnoremap <silent> <Leader>gw :Ggrep! "\<<cword>\>"<CR>
+nnoremap <silent> <Leader>gw :Ggrep! "\<<cword>\>"<CR>:cwin<CR>
 
 function! Trim()
   %s/\s*$//
