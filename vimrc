@@ -56,9 +56,10 @@ set guicursor+=i:ver100-iCursor
 
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 omnifunc=jedi#completions
 autocmd FileType tex setlocal textwidth=78
-autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
 autocmd FileType ruby runtime ruby_mappings.vim
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd BufNewFile,BufRead *.txt setlocal textwidth=78
+autocmd BufNewFile,BufRead *.tsx set filetype=typescript
 
 if version >= 700
     autocmd BufNewFile,BufRead *.txt setlocal spell spelllang=en_us
@@ -136,6 +137,7 @@ let g:jedi#smart_auto_mappings = 0
 let g:syntastic_check_on_open = 1
 let g:syntastic_python_checkers = ['python', 'pyflakes']
 let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_typescript_checkers = ['eslint']
 
 let g:jsx_ext_required = 0
 
