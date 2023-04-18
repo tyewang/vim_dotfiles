@@ -209,6 +209,10 @@ autocmd FileType javascript,typescript  map <silent> <LocalLeader>rb :wa<CR> :Ru
 autocmd FileType javascript map <silent> <leader>pt :Prettier<CR>
 autocmd FileType python map <silent> <leader>pt :Black<CR>
 
+" Tsuquyomi
+let g:tsuquyomi_disable_quickfix = 1
+autocmd FileType javascript,typescript map <silent> <LocalLeader>g :TsuDefinition<CR>
+
 " ========= Insert Shortcuts ========
 
 imap <C-L> <SPACE>=><SPACE>
