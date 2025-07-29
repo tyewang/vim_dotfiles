@@ -1,5 +1,4 @@
 " ========= Setup ========
-set rtp+=/usr/local/lib/python2.6/dist-packages/powerline/bindings/vim
 set rtp+=/opt/homebrew/opt/fzf
 
 set nocompatible
@@ -11,7 +10,6 @@ endif
 filetype off
 call pathogen#infect()
 filetype plugin indent on
-runtime macros/matchit.vim
 
 " ========= Options ========
 
