@@ -67,3 +67,6 @@
 [submodule "vim/pack/text_editing/start/tcomment_vim"]
 	path = vim/pack/text_editing/start/tcomment_vim
 	url = https://github.com/tomtom/tcomment_vim
+[submodule "vim/pack/navigation/start/fzf"]
+	path = vim/pack/navigation/start/fzf
+	url = https://github.com/junegunn/fzf.git

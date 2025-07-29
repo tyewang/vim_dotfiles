@@ -146,18 +146,7 @@ map <silent> <LocalLeader>nt :NERDTreeToggle<CR>
 map <silent> <LocalLeader>nr :NERDTree<CR>
 map <silent> <LocalLeader>nf :NERDTreeFind<CR>
 
-" FZF
-function! SmartFuzzy()
-  let root = split(system('git rev-parse --show-toplevel'), '\n')
-  if len(root) == 0 || v:shell_error
-    Files
-  else
-    GFiles -co --exclude-standard -- . ':!:vendor/*'
-  endif
-endfunction
-
-command! -nargs=* SmartFuzzy :call SmartFuzzy()
-map <silent> <leader>ff :SmartFuzzy<CR>
+map <silent> <leader>ff :FZF<CR>
 map <silent> <leader>fg :GFiles<CR>
 map <silent> <leader>fb :Buffers<CR>
 map <silent> <leader>ft :Tags<CR>
