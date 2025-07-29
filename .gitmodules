@@ -73,3 +73,6 @@
 [submodule "vim/pack/navigation/start/fugitive"]
 	path = vim/pack/navigation/start/fugitive
 	url = https://tpope.io/vim/fugitive.git
+[submodule "vim/pack/navigation/start/bufexplorer"]
+	path = vim/pack/navigation/start/bufexplorer
+	url = https://github.com/jlanzarotta/bufexplorer.git
