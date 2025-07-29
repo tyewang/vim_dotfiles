@@ -64,3 +64,6 @@
 [submodule "vim/pack/navigation/start/nerdtree"]
 	path = vim/pack/navigation/start/nerdtree
 	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/text_editing/start/tcomment_vim"]
+	path = vim/pack/text_editing/start/tcomment_vim
+	url = https://github.com/tomtom/tcomment_vim
