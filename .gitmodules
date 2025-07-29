@@ -61,3 +61,6 @@
 [submodule "vim/pack/text_editing/start/surround"]
 	path = vim/pack/text_editing/start/surround
 	url = https://tpope.io/vim/surround.git
+[submodule "vim/pack/navigation/start/nerdtree"]
+	path = vim/pack/navigation/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
